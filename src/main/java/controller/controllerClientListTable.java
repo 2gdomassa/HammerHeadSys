@@ -12,15 +12,28 @@ public class controllerClientListTable {
     
     private static ArrayList<client> listOfClients = new ArrayList();    
    
-    /* Metodo que recebe os dados do cliente, converte em objeto e adiciona na lista posteriormente adicionando na tabela e recarregando o array
+    /* Metodo que recebe os dados do cliente, converte em objeto e 
+    adiciona na lista posteriormente adicionando na tabela e recarregando o array
     Tambem recebe o metodo implementado na clientBase, utilizando a interface add_client_base */
         public static void convertClienteToObject(String name,String number,String address, add_client_table interfaceTable){
         client prototipe = new client(name,number,address,"0","0");
         addClient("teste.csv",prototipe);
         fileClientList.readAllLines("teste.csv",listOfClients);
         if(interfaceTable != null){
-            interfaceTable.updateTable();
+          interfaceTable.updateTable();
         }
+        }
+        
+        /* Metodo que recebe o nome de um cliente e retorna o cliente especifico do array 
+        Retorna null caso nao encontre */
+        public static client searchClient(String nameClient){
+             fileClientList.readAllLines("teste.csv",listOfClients);
+             for (client c : listOfClients){
+                 if(c.getName().equals(nameClient)){
+                  return c;   
+                 }
+                }
+             return null;
         }
        
         //Metodo pra adicionar uma linha na tabela Excel, usando os dados do cliente capturados com o metodo acima

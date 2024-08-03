@@ -28,7 +28,6 @@ clientBase ClientBaseView = new clientBase();
         jLabel1 = new javax.swing.JLabel();
         clientBaseBtn = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        makeOrderBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -67,11 +66,11 @@ clientBase ClientBaseView = new clientBase();
             }
         });
         container.add(clientBaseBtn);
-        clientBaseBtn.setBounds(50, 160, 80, 40);
+        clientBaseBtn.setBounds(50, 170, 80, 40);
 
         jButton4.setBackground(new java.awt.Color(204, 204, 204));
         jButton4.setForeground(new java.awt.Color(0, 0, 0));
-        jButton4.setText("?");
+        jButton4.setText("Orders");
         jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -79,19 +78,7 @@ clientBase ClientBaseView = new clientBase();
             }
         });
         container.add(jButton4);
-        jButton4.setBounds(130, 390, 80, 40);
-
-        makeOrderBtn.setBackground(new java.awt.Color(204, 204, 204));
-        makeOrderBtn.setForeground(new java.awt.Color(0, 0, 0));
-        makeOrderBtn.setText("New Order");
-        makeOrderBtn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true));
-        makeOrderBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                makeOrderBtnActionPerformed(evt);
-            }
-        });
-        container.add(makeOrderBtn);
-        makeOrderBtn.setBounds(130, 240, 80, 40);
+        jButton4.setBounds(50, 240, 80, 40);
 
         jLabel3.setFont(new java.awt.Font("MV Boli", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -137,10 +124,6 @@ ClientBaseView.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
-    private void makeOrderBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_makeOrderBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_makeOrderBtnActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -185,6 +168,5 @@ ClientBaseView.setVisible(true);
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JButton makeOrderBtn;
     // End of variables declaration//GEN-END:variables
 }
